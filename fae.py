@@ -30,6 +30,8 @@ class Client(commands.Bot):
         print(f"{prfx} Discord Version {Fore.YELLOW} {discord.__version__}")
         print(f"{prfx} Python Version {Fore.YELLOW} {str(platform.python_version())}")
         print(f"{prfx} Bot Version 0.1")
+        print(f"{prfx} Slash CMDs Synced: {Fore.YELLOW + str(len(await self.tree.fetch_commands(guild=MY_GUILD)))} Commands")
+        print(f"{prfx} Connected to: {Fore.YELLOW + str(len(self.guilds))} Guilds")
 
 client = Client()
 client.run(config.botConfig["token"])
